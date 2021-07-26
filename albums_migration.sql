@@ -9,3 +9,4 @@ CREATE TABLE IF NOT EXISTS albums (
     genre VARCHAR(30),
     PRIMARY KEY(id)
 );
+-- I am testing branch rename hopefully I didint mess this up
