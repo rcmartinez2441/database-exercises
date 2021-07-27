@@ -3,7 +3,7 @@ USE codeup_test_db;
 # Write SELECT statements to output each of the following with a caption:
 # After each SELECT add an UPDATE statement to:
 # Add SELECT statements after each UPDATE so you can see the results of your handiwork.
-#=========================================================================
+# =========================================================================
 #     All albums in your table.
 SELECT *
 FROM albums
@@ -18,6 +18,7 @@ ORDER BY name;
 #=========================================================================
 
 #     All albums released before 1980
+START TRANSACTION;
 SELECT *
 FROM albums
 WHERE release_date < 1980
@@ -31,6 +32,8 @@ SELECT *
 FROM albums
 WHERE release_date < 1980
 ORDER BY release_date;
+
+ROLLBACK;
 #=========================================================================
 #     All albums by Michael Jackson
 SELECT *
