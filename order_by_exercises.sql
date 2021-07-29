@@ -12,7 +12,7 @@ WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 ORDER BY first_name, last_name;
 
 # Change the ORDER BY clause so that you order by last name before first name. Your first result should still be Irena Acton but now the last result should be Vidya Quittner.
-SELECT *
+SELECT first_name, Last_name
 FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 ORDER BY last_name, first_name;
