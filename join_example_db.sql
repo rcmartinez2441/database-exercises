@@ -44,3 +44,15 @@ VALUES
 ('jimbo', 'jimbo@gmail.com', 2),
 ('jimmothy', 'jimmy@gmail.com', null),
 ('john', 'john@gmail.com', 2);
+
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+JOIN roles ON users.role_id = roles.id
+
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+LEFT JOIN roles ON users.role_id = roles.id
+
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+RIGHT JOIN roles ON users.role_id = roles.id
