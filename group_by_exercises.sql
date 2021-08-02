@@ -8,7 +8,7 @@ FROM titles;
 SELECT last_name
 FROM employees
 WHERE last_name LIKE ('e%')
-   AND last_name LIKE ('%e')
+  AND last_name LIKE ('%e')
 GROUP BY last_name
 ORDER BY last_name;
 
@@ -17,7 +17,7 @@ SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE ('e%')
   AND last_name LIKE ('%e')
-GROUP BY  first_name, last_name
+GROUP BY first_name, last_name
 ORDER BY last_name;
 
 # Find the unique last names with a 'q' but not 'qu'. Your results should be:
@@ -30,7 +30,7 @@ ORDER BY last_name;
 
 # Add a COUNT() to your results and use ORDER BY to make it easier to find employees whose unusual name is shared with others.
 SELECT last_name,
-                COUNT(last_name) AS '# of People With Last Name'
+       COUNT(last_name) AS '# of People With Last Name'
 FROM employees
 WHERE last_name LIKE ('%q%')
   AND last_name NOT LIKE ('%qu%')
